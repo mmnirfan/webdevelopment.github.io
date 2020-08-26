@@ -1,0 +1,139 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-size: cover;
+}
+    /* section-1 */
+.header {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    position: relative;
+}
+.logo {
+    background-color: rgb(56, 137, 143);
+    text-align: center;
+    padding: 5.5px;
+    color: white;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    font-family: serif;
+}
+.menu-bar {
+    background: rgb(56, 137, 143);
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li {
+    width: 120px;
+    /*margin: 15px;*/
+    padding:15px;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover {
+    background: tomato;
+    border-radius: 3px;
+}
+
+/*section-2*/
+
+.contact-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    background: #fff;
+    width: 100%;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgb(105, 105, 104);
+    
+}
+.contact-card h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+.contact-card .card{
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.contact-card .card i{
+    padding-bottom: 10px;
+}
+.contact-card .card p{
+    padding-bottom: 15px;
+}
+
+/*section-3*/
+
+h3 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: maroon;
+    letter-spacing: 4px;
+    padding-top: 550px;
+    text-align: center;
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.section3 a{
+    display: flex;
+    background:  #71f5eeee;
+    height: 35px;
+    width: 35px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 4px 4px 6px -1px rgba(0,0,0,0.15),
+                -4px -4px 6px -1px rgb(56, 137, 143);
+    border: 1px solid rgba(0,0,0,0);
+    transition: transform 0.5s;
+}
+.section3 a i{
+    font-size: 20px;
+    color: #777;
+    transition: transform 0.5s;
+}
+.section3 a:hover{
+    box-shadow: inset 2px 2px 4px -1px rgba(0,0,0,0.2),
+                inset -2px -2px 4px -1px  rgb(56, 137, 143),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.01);
+    transform: translateY(2px);
+}
+.section3 a:hover i{
+    transform: scale(0.90);
+}
+.section3 a:hover .fa-linkedin-in{
+    color: blue;
+} 
+.section3 a:hover .fa-whatsapp{
+    color: green;
+}
+.section3 a:hover .fa-youtube{
+    color: #f00;
+}

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <link rel="stylesheet" href="css\youtube.css">
+    <script type="text/javascript" src="scripts\youtube.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="youtube.html">Youtube</a></li>
+            <li><a href="form.html">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="bar">
+        <div class="logo">
+            <img id="img1" onmouseover="setNewImage(this)" onmouseout="setOldImage(this)" src="images\logo1.jpg" />
+        </div>
+        <div id="clock"></div>
+    </div>
+    <div class="section-2">
+        <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6SWNilchGhA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>iGlass | Augmented reality glass</h2>
+            <p>58k views • 27 Jul 2020</p>
+            <yt-icon id="like" class="style-scope ytd-toggle-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;" onclick="like()"><g class="style-scope yt-icon">
+                <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" class="style-scope yt-icon"></path>
+            </g></svg><!--css-build:shady-->
+            </yt-icon> 
+            <yt-icon id="dislike" class="style-scope ytd-toggle-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
+                <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" class="style-scope yt-icon"></path>
+            </g></svg><!--css-build:shady-->
+            </yt-icon>
+            <yt-icon id="share" class="style-scope ytd-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
+                
+                <path d="M11.7333 8.26667V4L19.2 11.4667L11.7333 18.9333V14.56C6.4 14.56 2.66667 16.2667 0 20C1.06667 14.6667 4.26667 9.33333 11.7333 8.26667Z" class="style-scope yt-icon"></path>
+            </g></svg><!--css-build:shady-->
+            </yt-icon>
+            <yt-icon id="save" class="style-scope ytd-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
+                <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" class="style-scope yt-icon"></path>
+            </g></svg><!--css-build:shady-->
+            </yt-icon>
+            <yt-icon class="style-scope ytd-menu-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
+                <circle cx="5" cy="12" r="2" class="style-scope yt-icon"></circle><circle cx="12" cy="12" r="2" class="style-scope yt-icon"></circle><circle cx="19" cy="12" r="2" class="style-scope yt-icon"></circle>
+            </g></svg><!--css-build:shady-->
+            </yt-icon>   
+            <paper-button id="button" onclick="subscribe()">Subscribe</paper-button>
+        </div>
+        <div class="search">
+            <p>Welcome to <b>Youtube</b> </p>
+            <form action="https://www.youtube.com/results">
+                <label for="">Youtube Search</label><input type="text" name="search_query" placeholder="Type to Search" id="inp"> <br><br>
+                <input type="submit" value="Search" id="btn">
+            </form>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h3>Youtube SignUp</h3>
+        <div id="error_message"></div>
+
+        <form id="myform" onsubmit="return validation()">
+            <div class="input_field">
+                <input type="text" placeholder="First Name" id="firstname" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Last Name" id="lastname" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()">
+            </div>
+            <div class="input_field">
+                <input type="password" placeholder="Password" id="password" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()">
+            </div>
+            <div class="input_field">
+                <select id="" onfocus="focusFunction(this)" onblur="blurFunction(this)" onchange="changeFunction(this)">
+                    <option value="Select country">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UAE">UAE</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+            <div id="test" style="border: 1px solid black; margin-top: 20px;"></div>
+            <div class="btn">
+                <input type="submit" value="signup">
+            </div>
+        </form>
+    </div>
+       
+</body>
+</html>
